@@ -117,7 +117,7 @@ letter-spacing: 5px;
 
 /* When mouse hover to navigation bar link */
 #navigation-bar a:hover {
-background-color: white;
+background-color: black;
 color: #fff;
 transition: 0.5s;
 }
