@@ -1,0 +1,111 @@
+<!DOCTYPE HTML>
+
+<head>
+	<title>Contact Me</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>	
+</head>
+<body>
+	<div id="navigation-bar">
+		<a href="index.html">Home</a>
+		<a href="about.html">About Me</a>
+		<a href="contact.html" class="active">Contact</a>
+	</div>
+
+	<div class="header">
+		<h1>DICKY TRISMANTO</h1>
+	</div>
+	
+	<div class="introduction">
+		<h1>CONTACT ME</h1>
+	</div>
+	
+	<div class="content-2">
+		<form action="#" method="post">
+			<div class="row">
+			  <div class="col-25">
+				<label for="name">Name :</label>
+			  </div>
+			  <div class="col-75">
+				<input type="text" id="name" name="name" placeholder="Name">
+			  </div>
+			</div>
+			<div class="row">
+			  <div class="col-25">
+				<label for="email">Phone Number :</label>
+			  </div>
+			  <div class="col-75">
+				<input type="text" id="email" name="email" placeholder="Phone Number">
+			  </div>
+			</div>
+			<div class="row">
+			  <div class="col-25">
+				<label for="email">Email :</label>
+			  </div>
+			  <div class="col-75">
+				<input type="text" id="email" name="email" placeholder="Email">
+			  </div>
+			</div>
+			<div class="row">
+			  <div class="col-25">
+				<label for="email">Social Media :</label>
+			  </div>
+			  <div class="col-75">
+				<input type="text" id="email" name="email" placeholder="Instagram">
+			  </div>
+			</div>
+			<div class="row">
+			  <div class="col-25">
+				<label for="message">Message :</label>
+			  </div>
+			  <div class="col-75">
+				<textarea id="message" name="message" placeholder="Messsage" style="height:200px"></textarea>
+			  </div>
+			</div>
+			<div class="row">
+			  <button type="submit">Submit</button>
+			  <button type="reset">Clear</button>
+			</div>
+			<div class="row">
+			  <h5>Or you can contact me from my WhatsApp in below</h5>
+			</div>
+		</form>
+	</div>
+	
+	
+	<div class="footer">
+		<p><a href="gallery.html">Photo Gallery</a>&nbsp;&nbsp;
+		<a href="quote.html">Quote</a>&nbsp;&nbsp;
+		<a href="#top" id="goToTop" title="Go to top of the page">Go Top</a></p>
+		<a href="https://instagram.com/dickytrismanto" target="_blank">Instagram</a>&nbsp;&nbsp;
+		<a href="https://wa.me/6285935130313" target="_blank">WhatsApp</a>
+		<p>© 2020 Dicky Trismanto </p>
+	</div>
+
+	<script>
+	// Javascript
+	// When the user scrolls down 20px from the top of the document, slide down the navbar
+	// When the user scrolls to the top of the page, slide up the navbar (50px out of the top view)
+	window.onscroll = function() {scrollFunction()};
+
+	function scrollFunction() {
+	  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+		document.getElementById("navigation-bar").style.top = "0";
+	  } else {
+		document.getElementById("navigation-bar").style.top = "-50px";
+	  }
+	}
+	</script>
+	
+	<script>
+	// jQuery
+	$("a[href='#top']").click(function() {
+	$("html, body").animate({ scrollTop: 0 }, "slow");
+	return false;
+	});
+	</script>
+	
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>404 Page Not Found !</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>	
+	<script>
+		function goBack() {
+			window.history.back();
+		}
+	</script>
+</head>
+<body>
+	<div id="navigation-bar">
+		<a href="index.html">Home</a>
+		<a href="about.html">About Me</a>
+		<a href="contact.html">Contact</a>
+	</div>
+
+	<div class="header">
+		<h1>DICKY TRISMANTO</h1>
+		<p>Don't worry , you will back on Home Page</p>
+	</div>
+	
+	<div class="content-2">
+		<h3 class="text-title">Got lost my friend ?</h3>
+		<div class="center-text">
+			<a onclick="goBack()" class="cursor" href="gallery.html">Back</a> or <a href="index.html">Home Page</a>
+		</div>
+		<hr />
+		<form class="search-box" action="#">
+			<input type="text" placeholder="Search" name="search">
+			<button type="submit">Go</button>
+		</form>
+	</div>
+	
+	<div class="footer">
+		<p><a href="gallery.html">Photo Gallery</a>&nbsp;&nbsp;
+		<a href="quote.html">Quote</a>&nbsp;&nbsp;
+		<a href="#top" id="goToTop" title="Go to top of the page">Go Top</a></p>
+		<a href="https://instagram.com/dickytrismanto" target="_blank">Instagram</a>&nbsp;&nbsp;
+		<a href="https://wa.me/6285935130313" target="_blank">WhatsApp</a>
+		<p>© 2020 Dicky Trismanto </p>
+	</div>
+
+	<script>
+	// Javascript
+	// When the user scrolls down 20px from the top of the document, slide down the navbar
+	// When the user scrolls to the top of the page, slide up the navbar (50px out of the top view)
+	window.onscroll = function() {scrollFunction()};
+
+	function scrollFunction() {
+	  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+		document.getElementById("navigation-bar").style.top = "0";
+	  } else {
+		document.getElementById("navigation-bar").style.top = "-50px";
+	  }
+	}
+	</script>
+	
+	<script>
+	// jQuery
+	$("a[href='#top']").click(function() {
+	$("html, body").animate({ scrollTop: 0 }, "slow");
+	return false;
+	});
+	</script>
+	
+</body>
+</html>

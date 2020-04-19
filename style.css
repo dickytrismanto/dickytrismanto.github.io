@@ -1,0 +1,388 @@
+{
+box-sizing: border-box;
+}
+
+html {
+scroll-behavior: smooth;
+}
+
+body {
+margin: 0;
+font-family: 'Arial Light', Arial, sans-serif;
+cursor: default;
+}
+
+hr {
+border-top: 1px solid #eee;
+}
+
+a {
+text-decoration: none;
+}
+
+.cursor {
+cursor: pointer;
+}
+
+.text-title {
+font-size: 45px;
+}
+
+.center-text {
+text-align: center;
+}
+
+/* Header of the page */
+.header {
+background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("2.jpg") center;
+color: #fff;
+text-align: center;
+padding: 100px;
+cursor: default;
+}
+
+/* Increase h1 font-size in header class */
+.header h1 {
+font-size: 40px;
+}
+
+/* Introduction */
+.introduction {
+background-color: #5c873a; /* Moss Green */
+color: #ffffff;
+padding-top: 45px;
+padding-bottom: 45px;
+text-align: center;
+}
+
+/* Introduction Image */
+.introduction-img {
+width: 315px;
+height: 290px;
+border-radius: 50%;
+}
+
+.introduction h1 {
+font-size: 45px;
+}
+
+.introduction h3 {
+font-size: 25px;
+}
+
+/* Content */
+.content {
+background-color: #474e5d;
+color: #ffffff;
+padding-top: 70px;
+padding-bottom: 70px;
+padding-left: 150px;
+padding-right: 150px;
+text-align: center;
+}
+
+.content-2 {
+margin: auto;
+padding: 35px;
+width: 50%;
+text-align: justify;
+font-size: 24px;
+line-height: 1.8;
+}
+
+.content-2 h3 {
+text-align: center;
+}
+
+/* Navigation Bar */
+#navigation-bar {
+overflow: hidden;
+background-color: #333;
+top: -50px;
+position: fixed;
+width: 100%;
+transition: top 0.5s;
+}
+
+/* Navigation link style */
+#navigation-bar a {
+float: left;
+display: block;
+color: #fff;
+text-align: center;
+padding: 14px 20px;
+text-decoration: none;
+letter-spacing: 5px;
+}
+
+/* When mouse hover to navigation bar link */
+#navigation-bar a:hover {
+background-color: #ddd;
+color: #000;
+transition: 0.5s;
+}
+
+/* When you in current page */
+#navigation-bar a.active {
+background-color: #4CAF50;
+color: #fff;
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.stickyNavBar {
+position: fixed;
+top: 0;
+width: 100%;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.stickyNavBar + .main-menu {
+padding-top: 60px;
+}
+
+/* Body of the page */
+.wrapper {
+display: flex;
+flex-wrap: wrap;
+}
+
+/* Content or main menu */
+.main-menu {
+flex: 100%;
+background-color: #fff;
+padding: 16px;
+text-align: center;
+}
+
+/* Slidebox */
+#slide-text, #slide {
+padding: 5px;
+text-align: center;
+border: 1px solid #4CAF50;
+color: #000;
+}
+
+#slide-text {
+background-color: #474e5d;
+padding-top: 103px;
+padding-bottom: 103px;
+color: #fff;
+display: none;
+line-height: 2;
+}
+
+/* Footer */
+.footer {
+text-align: center;
+background: #2f2f2f;
+color: #fff;
+padding: 10px;
+cursor: default;
+}
+
+.footer a {
+text-decoration: none;
+color: #fff;
+}
+
+.footer a.active-2 {
+color: #4CAF50;
+}
+
+/* Scroll to go top Top Page */
+
+a#goToTop {
+color: #fff;
+text-decoration: none;
+}
+
+a#goToTop i {
+color: #fff;
+}
+
+a#goToTop i:hover {
+text-decoration:none;
+}
+
+/* FORM */
+/* Style inputs, select elements and textareas */
+input[type=text], select, textarea{
+width: 100%;
+padding: 12px;
+border: 1px solid #ccc;
+border-radius: 4px;
+box-sizing: border-box;
+resize: vertical;
+}
+
+/* Style the label to display next to the inputs */
+label {
+padding: 12px 12px 12px 0;
+display: inline-block;
+}
+
+/* Style the submit button */
+button[type=submit], button[type=reset] {
+background-color: #4CAF50;
+color: white;
+padding: 15px 20px;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+float: right;
+margin-left: 5px;
+}
+
+/* Style the search field */
+form.search-box input[type=text] {
+padding: 10px;
+font-size: 17px;
+border: 1px solid grey;
+float: left;
+width: 78%;
+background: #f1f1f1;
+}
+
+/* Style the submit button */
+form.search-box button {
+float: right;
+width: 20%;
+padding: 10px;
+background: #2196F3;
+color: white;
+font-size: 17px;
+border: 1px solid grey;
+border-left: none; /* Prevent double borders */
+cursor: pointer;
+}
+
+form.search-box button:hover {
+background: #0b7dda;
+}
+
+/* Clear floats */
+form.search-box::after {
+content: "";
+clear: both;
+display: table;
+}
+
+/* Style the container */
+.container {
+border-radius: 5px;
+background-color: #f2f2f2;
+padding: 20px;
+}
+
+/* Floating column for labels: 25% width */
+.col-25 {
+float: left;
+width: 25%;
+}
+
+/* Floating column for inputs: 75% width */
+.col-75 {
+float: left;
+width: 75%;
+margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+content: "";
+display: table;
+clear: both;
+}
+
+/* Table */
+table {
+width: 100%;
+}
+
+th, td {
+padding: 15px;
+}
+
+td {
+text-align: center;
+}
+
+table tr:nth-child(even) {
+background-color: #eee;
+}
+table tr:nth-child(odd) {
+background-color: #fff;
+}
+table th {
+color: white;
+background-color: black;
+}
+
+/* Table Image */
+.table-img {
+max-width: 200px;
+height: auto;
+margin: auto;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+.col-25, .col-75, button[type=submit], button[type=reset], table {
+width: 100%;
+margin-top: 5px;
+}
+}
+
+/* Responsive layout for mobile phones */
+@media screen and (max-width: 600px) {
+.introduction, .introduction h3, .content-2, table {
+width: 100%;
+}
+.introduction-img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 62%;
+height: auto;
+}
+}
+
+/* Responsive layout for tablet */
+@media screen and (max-width: 768px) {
+.introduction {
+padding: 20px;
+margin: auto;
+}
+.introduction, .introduction h3, .content-2, table {
+width: 100%;
+}
+.introduction-img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 62%;
+height: auto;
+}
+}
+
+/* Responsive layout for iPad Pro */
+@media screen and (max-width: 1024px) {
+.introduction, .introduction h3, .content-2 {
+width: 100%;
+padding: 20px;
+}
+
+table {
+width: 100%;
+margin-left: -15px;
+}
+
+.introduction-img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 62%;
+height: auto;
+}
+}
+

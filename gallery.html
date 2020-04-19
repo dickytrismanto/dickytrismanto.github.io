@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+
+<head>
+	<title>Gallery</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>	
+</head>
+<body>
+	<div id="navigation-bar">
+		<a href="index.html">Home</a>
+		<a href="about.html">About Me</a>
+		<a href="contact.html">Contact</a>
+	</div>
+
+	<div class="header">
+		<h1>DICKY TRISMANTO</h1>
+		<p>This is my Collection of Photography</p>
+		<p>Enjoy :)</p>
+	</div>
+	
+	<div class="introduction">
+		<h1>Photo Gallery</h1>
+	</div>
+	
+	<div class="content-2">
+		<table>
+			<tr>
+				<th>No</th>
+				<th>Title</th>
+				<th>Photo</th>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>Sanur, Pantai Karang</td>
+				<td><img src="3.jpg" class="table-img" alt="Sanur, Pantai Karang"/></td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>Bedugul, Tamblingan Lake</td>
+				<td><img src="9.jpg" class="table-img" alt="Bedugul, Danau Tamblingan"/></td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>Nusa Penida, Kelingking Beach</td>
+				<td><img src="5.jpg" class="table-img" alt="Nusa Penida, Kelingking Beach"/></td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td>Nusa Penida, Diamond Beach</td>
+				<td><img src="6.jpg" class="table-img" alt="Nusa Penida, Diamond Beach"/></td>
+			</tr>
+			<tr>
+				<td>5</td>
+				<td>Borobudur Temple</td>
+				<td><img src="7.jpg" class="table-img" alt="Borobudur Temple"/></td>
+			</tr>
+			<tr>
+				<td>6</td>
+				<td>Jimbaran, Tegal Wangi Beach</td>
+				<td><img src="8.jpg" class="table-img" alt="Jimbaran, Tegal Wangi Beach"/></td>
+			</tr>
+			</tr>			
+		</table>
+	</div>
+
+	<div class="footer">
+		<p><a href="gallery.html">Photo Gallery</a>&nbsp;&nbsp;
+		<a href="quote.html">Quote</a>&nbsp;&nbsp;
+		<a href="#top" id="goToTop" title="Go to top of the page">Go Top</a></p>
+		<a href="https://instagram.com/dickytrismanto" target="_blank">Instagram</a>&nbsp;&nbsp;
+		<a href="https://wa.me/6285935130313" target="_blank">WhatsApp</a>
+		<p>© 2020 Dicky Trismanto </p>
+	</div>
+
+	<script>
+	// Javascript
+	// When the user scrolls down 20px from the top of the document, slide down the navbar
+	// When the user scrolls to the top of the page, slide up the navbar (50px out of the top view)
+	window.onscroll = function() {scrollFunction()};
+
+	function scrollFunction() {
+	  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+		document.getElementById("navigation-bar").style.top = "0";
+	  } else {
+		document.getElementById("navigation-bar").style.top = "-50px";
+	  }
+	}
+	</script>
+	
+	<script>
+	// jQuery
+	$("a[href='#top']").click(function() {
+	$("html, body").animate({ scrollTop: 0 }, "slow");
+	return false;
+	});
+	</script>
+	
+</body>
+</html>

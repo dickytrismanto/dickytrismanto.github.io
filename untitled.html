@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>Quote</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>	
+</head>
+<body>
+	<div id="navigation-bar">
+		<a href="index.html">Home</a>
+		<a href="about.html">About Me</a>
+		<a href="contact.html">Contact</a>
+	</div>
+
+	<div class="header">
+		<h1>MAHADI SAPUTRA</h1>
+		<p>Just a simple site ~</p>
+	</div>
+	
+	<div class="introduction">
+		<h1>QUOTE</h1>
+	</div>
+	
+	<div class="content-2">
+	"&nbsp;You only live once, but if you do it right, once is enough.&nbsp;"
+	<br>— <strong>Mae West</strong>
+	<br><br>
+	&nbsp;Not how long, but how well you have lived is the main thing.&nbsp;
+	<br>— <strong>Seneca</strong>
+	<br><br>
+	&nbsp;Life is really simple, but men insist on making it complicated.&nbsp;
+	<br>— <strong>Confucius</strong>
+	<br><br>
+	&nbsp;Keep calm and carry on.&nbsp;
+	<br>— <strong>Winston Churchill</strong>
+	</div>
+	
+	<div class="footer">
+		<p><a href="gallery.html">Gallery</a>&nbsp;&nbsp;
+		<a href="quote.html" class="active-2">Quote</a>&nbsp;&nbsp;
+		<a href="#top" id="goToTop" title="Go to top of the page">Go to top</a></p>
+		<a href="https://www.facebook.com/DodePersie" target="_blank">Facebook</a>&nbsp;&nbsp;
+		<a href="https://instagram.com/DodePersie" target="_blank">Instagram</a>&nbsp;&nbsp;
+		<a href="https://wa.me/6287862191120" target="_blank">WhatsApp</a>
+		<p>&copy; 2020 Mahadi Saputra - Thanks to W3Schools ~ </p>
+	</div>
+
+	<script>
+	// Javascript
+	// When the user scrolls down 20px from the top of the document, slide down the navbar
+	// When the user scrolls to the top of the page, slide up the navbar (50px out of the top view)
+	window.onscroll = function() {scrollFunction()};
+
+	function scrollFunction() {
+	  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+		document.getElementById("navigation-bar").style.top = "0";
+	  } else {
+		document.getElementById("navigation-bar").style.top = "-50px";
+	  }
+	}
+	</script>
+	
+	<script>
+	// jQuery
+	$("a[href='#top']").click(function() {
+	$("html, body").animate({ scrollTop: 0 }, "slow");
+	return false;
+	});
+	</script>
+	
+</body>
+</html>
